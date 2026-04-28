@@ -1,0 +1,1149 @@
+[
+  {
+    "@search.score": 1.0,
+    "partnerType": [],
+    "industry": [],
+    "businessFocus": [],
+    "product": [],
+    "lineOfBusiness": "",
+    "speakerNames": "Deborah Chen, Andrew Liu, Liz Nelson",
+    "canUserModifySchedule": true,
+    "hasFailoverVideoUrl": false,
+    "ssr": "",
+    "excludeFromSessionScheduler": false,
+    "doNotPublishVideo": false,
+    "localizedId": "en-US-89643997-a80f-4ef7-a6b7-ad8200be3517",
+    "langLocale": "en-US",
+    "sessionId": "89643997-a80f-4ef7-a6b7-ad8200be3517",
+    "sessionInstanceId": "89643997-a80f-4ef7-a6b7-ad8200be3517",
+    "sessionCode": "BRK212",
+    "sessionCodeNormalized": "EN-US-BRK212",
+    "title": "Design scalable data layers for multi-tenant apps with Azure Cosmos DB",
+    "sortTitle": "design scalable data layers for multi-tenant apps with azure cosmos db",
+    "description": "When building multi-tenant SaaS apps, developers must design for data isolation, scalability, and performance.  Azure Cosmos DB, a high-performance and AI-ready database, has new fleet management capabilities to simplify capacity management and monitoring at scale, and materialized views and global secondary indexes to deliver faster queries. Hear from Azure Cosmos DB product leaders and SaaS firm Sitecore for tips on data modeling, design patterns, and query optimizations for resilient and scalable apps.",
+    "aiDescription": "<p><strong>Welcome and Overview:</strong> The session opened with a welcome to all participants, hoping they had a smooth start to the event despite potential long lines during lunch. The main discussion centered on designing scalable data layers for multi-tenant applications using Azure Cosmos DB.</p>\n\n<p><strong>Speakers Introduction:</strong> The main speaker was introduced along with two colleagues, Deborah and Liz, who are also specialists in Azure Cosmos DB. Liz, a guest speaker from Secor, contributed her insights, particularly on multi-tenant applications.</p>\n\n<p><strong>Session Structure:</strong> The agenda for the session was detailed, which included a walkthrough of the lifecycle of building a multi-tenant application on Cosmos DB, insights from past experiences, and valuable design constraints necessary for such applications.</p>\n\n<p><strong>Design and Development Focus:</strong> Emphasis was placed on the initial design and development phases of multi-tenant applications. Discussions covered the balance between tenant isolation and cost efficiency, the use of Cosmos DB for data management, and practical examples from real-world applications.</p>\n\n<p><strong>Production and Post-Production Strategies:</strong> The latter part of the session focused on strategies for productionizing multi-tenant applications. This involved understanding the design patterns for resiliency and exploring post-production monitoring and optimization techniques to enhance application performance and cost-efficiency.</p>\n\n<p><strong>Interactive Q&A:</strong> The session concluded with an interactive question and answer segment where attendees engaged with the speakers to clarify doubts and gather more personalized insights on deploying multi-tenant architectures using Azure Cosmos DB.</p>",
+    "businessOutcome": "",
+    "businessOutcomeTwo": "",
+    "registrationLink": "",
+    "targetAudience": "",
+    "contentArea": [],
+    "sortRank": 2,
+    "location": "Arch, 800 Pike, Level 3, Tahoma 4",
+    "TimeSlot": "13:30 - 14:30",
+    "startDateTime": "2025-05-19T20:30:00Z",
+    "startDateTimeNullGroup": 1,
+    "endDateTime": "2025-05-19T21:30:00Z",
+    "durationInMinutes": 60,
+    "slideDeck": "https://medius.microsoft.com/video/asset/PPT/b2001a92-6a87-4ee5-9633-036053d8b9c3",
+    "isMandatory": false,
+    "hasLiveStream": false,
+    "onDemand": "https://medius.microsoft.com/Embed/video-nc/b2001a92-6a87-4ee5-9633-036053d8b9c3",
+    "hasOnDemand": true,
+    "downloadVideoLink": "https://medius.microsoft.com/video/asset/HIGHMP4/b2001a92-6a87-4ee5-9633-036053d8b9c3",
+    "captionFileLink": "https://medius.microsoft.com/video/asset/Transcript/b2001a92-6a87-4ee5-9633-036053d8b9c3",
+    "onDemandThumbnail": "https://medius.microsoft.com/Embed/video-nc/b2001a92-6a87-4ee5-9633-036053d8b9c3",
+    "speakerIds": [
+      "33e5a43a-42f6-4e4c-99f3-6cde26f20e1e",
+      "aa822301-1b09-49d0-83a5-73f0d4ee0794",
+      "b243746a-51bc-496e-b344-39d73f08a302"
+    ],
+    "sessionLinks": [],
+    "relatedSessionCodes": [
+      "BRK197",
+      "DEM567",
+      "BRK202",
+      "BRK143",
+      "LAB361"
+    ],
+    "hasTeamsMeeting": false,
+    "hasTeamsLiveEvent": false,
+    "lastUpdate": "2025-09-14T20:35:11.904Z",
+    "heroSession": false,
+    "restrictedScopes": [],
+    "associatedCompanies": [],
+    "captionLanguage": [],
+    "audioLanguage": [],
+    "aslSupported": false,
+    "isExternalUrlSession": false,
+    "sessionType": {
+      "displayValue": "Breakout",
+      "logicalValue": "Breakout"
+    },
+    "topic": [
+      {
+        "displayValue": "Data & Analytics",
+        "logicalValue": "Data & Analytics"
+      }
+    ],
+    "sessionLevel": [
+      {
+        "displayValue": "Expert (400)",
+        "logicalValue": "Expert (400)"
+      }
+    ],
+    "audienceTypes": [],
+    "deliveryTypes": [
+      {
+        "displayValue": "Online",
+        "logicalValue": "Online"
+      },
+      {
+        "displayValue": "In person",
+        "logicalValue": "In person"
+      }
+    ],
+    "programmingLanguages": [
+      {
+        "displayValue": "C#",
+        "logicalValue": "C#"
+      }
+    ],
+    "tags": [
+      {
+        "displayValue": "Software Development Company ",
+        "logicalValue": "Software Development Company "
+      }
+    ],
+    "theme": [],
+    "solutionArea": [],
+    "communityTopic": [],
+    "learningZoneTopic": [],
+    "SpeakerTypes": [
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "33e5a43a-42f6-4e4c-99f3-6cde26f20e1e",
+        "RegistrantKey": "33e5a43a-42f6-4e4c-99f3-6cde26f20e1e"
+      },
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "aa822301-1b09-49d0-83a5-73f0d4ee0794",
+        "RegistrantKey": "aa822301-1b09-49d0-83a5-73f0d4ee0794"
+      },
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "b243746a-51bc-496e-b344-39d73f08a302",
+        "RegistrantKey": "b243746a-51bc-496e-b344-39d73f08a302"
+      }
+    ],
+    "repeatedSessions": [],
+    "relatedResources": [
+      {
+        "link": "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/checklist",
+        "backpackLink": null,
+        "label": "Multitenancy checklist on Azure",
+        "category": "Web link"
+      }
+    ],
+    "nextStep": {
+      "link": "https://aka.ms/build25/plan/ADAI_DevStartPlan",
+      "backpackLink": null,
+      "label": "More on this topic",
+      "category": "Learn"
+    },
+    "event": [
+      {
+        "displayValue": null,
+        "logicalValue": null
+      }
+    ],
+    "sessionLanguage": [],
+    "viewingOptions": [
+      {
+        "displayValue": "Recorded",
+        "logicalValue": "Recorded"
+      }
+    ]
+  },
+  {
+    "@search.score": 1.0,
+    "partnerType": [],
+    "industry": [],
+    "businessFocus": [],
+    "product": [],
+    "lineOfBusiness": "",
+    "speakerNames": "Scott Hanselman, Mark Russinovich",
+    "canUserModifySchedule": true,
+    "hasFailoverVideoUrl": false,
+    "ssr": "",
+    "excludeFromSessionScheduler": false,
+    "doNotPublishVideo": false,
+    "localizedId": "en-US-00838e8c-29a0-4d27-a17b-d0e8c8922025",
+    "langLocale": "en-US",
+    "sessionId": "00838e8c-29a0-4d27-a17b-d0e8c8922025",
+    "sessionInstanceId": "00838e8c-29a0-4d27-a17b-d0e8c8922025",
+    "sessionCode": "KEY040",
+    "sessionCodeNormalized": "EN-US-KEY040",
+    "title": "Scott and Mark Learn to...LIVE",
+    "sortTitle": "scott and mark learn to...live",
+    "description": "Join Mark Russinovich and Scott Hanselman as they put everything they have learned at Microsoft Build together into one epic demo for the ages. No slides (ok that's a lie, Mark loves slides and who is going to tell him no?), no pre-recorded videos, nothing but pure code, copilot PCs, local models, massive frontier models, vibe coding, visual studio, and maybe a robot.",
+    "aiDescription": "<p><b>Opening and Community Engagement:</b> At the start of the session, Scott Hanselman and Mark Russinovich welcomed the audience, expressing appreciation for their participation and emphasizing the value of community interaction. They introduced the session as a \"Lock Note,\" a playful twist on opening keynotes, aimed at addressing real-world problems with agentic AI.</p>\n\n<p><b>Robotics Innovation Exploration:</b> The discussion progressed into exploring practical applications of robotics, sparked by a casual comment about the inconvenience of fetching drinks. This led to the idea of using a robot for such tasks, which turned into a project involving a collaborative robot from Hello Robot. The robot, designed for research and open-source projects, was demonstrated live, showing its ability to interact and perform tasks like fetching objects.</p>\n\n<p><b>Technical Challenges and Solutions:</b> Throughout the session, technical aspects and challenges of working with robotics and AI were discussed, including mobility, object recognition, and interaction protocols. The robot used in the demonstration was capable of navigating to specific locations, recognizing objects, and handling them, albeit with occasional recalibrations and manual adjustments.</p>\n\n<p><b>Integration of AI and Robotics:</b> The session highlighted the integration of AI models and robotics, showcasing how AI technologies like image recognition and voice interaction can enhance robotic functionalities. The robot demonstrated its capability to respond to voice commands and interact with its environment, although it encountered some difficulties in task execution.</p>\n\n<p><b>Community Recognition and Fun Interaction:</b> In a lighter segment, the session featured a contest where participants created AI agents, with winners receiving prizes for their innovative contributions. This not only recognized community efforts but also added an element of fun and engagement to the discussion. The session closed with a playful and humorous interaction with the robot trying to complete the task of fetching a drink, which provided a live demonstration of the practical challenges and unpredictable nature of robotics and AI.</p>",
+    "businessOutcome": "",
+    "businessOutcomeTwo": "",
+    "registrationLink": "",
+    "targetAudience": "",
+    "contentArea": [],
+    "sortRank": 1,
+    "location": "Arch, 705 Pike, Level 6, Room 6B",
+    "TimeSlot": "11:30 - 12:30",
+    "startDateTime": "2025-05-22T18:30:00Z",
+    "startDateTimeNullGroup": 1,
+    "endDateTime": "2025-05-22T19:30:00Z",
+    "durationInMinutes": 60,
+    "slideDeck": "",
+    "isMandatory": false,
+    "hasLiveStream": false,
+    "onDemand": "https://medius.microsoft.com/Embed/video-nc/6f1d8e56-023e-4a4a-8896-9179db9ee14c",
+    "hasOnDemand": true,
+    "downloadVideoLink": "https://medius.microsoft.com/video/asset/HIGHMP4/6f1d8e56-023e-4a4a-8896-9179db9ee14c",
+    "captionFileLink": "https://medius.microsoft.com/video/asset/Transcript/6f1d8e56-023e-4a4a-8896-9179db9ee14c",
+    "onDemandThumbnail": "https://medius.microsoft.com/Embed/video-nc/6f1d8e56-023e-4a4a-8896-9179db9ee14c",
+    "speakerIds": [
+      "f0e9effa-bb15-4644-bbfe-fce40797e93f",
+      "99c77f57-0247-4ee3-828e-c99e643c8498"
+    ],
+    "sessionLinks": [],
+    "relatedSessionCodes": [],
+    "hasTeamsMeeting": false,
+    "hasTeamsLiveEvent": false,
+    "lastUpdate": "2025-09-14T20:35:11.904Z",
+    "heroSession": true,
+    "restrictedScopes": [],
+    "associatedCompanies": [],
+    "captionLanguage": [],
+    "audioLanguage": [],
+    "aslSupported": false,
+    "isExternalUrlSession": false,
+    "sessionType": {
+      "displayValue": "Keynote",
+      "logicalValue": "Keynote"
+    },
+    "topic": [
+      {
+        "displayValue": "Developer Tools & .NET",
+        "logicalValue": "Developer Tools & .NET"
+      }
+    ],
+    "sessionLevel": [
+      {
+        "displayValue": "Intermediate (200)",
+        "logicalValue": "Intermediate (200)"
+      }
+    ],
+    "audienceTypes": [],
+    "deliveryTypes": [
+      {
+        "displayValue": "Online",
+        "logicalValue": "Online"
+      },
+      {
+        "displayValue": "In person",
+        "logicalValue": "In person"
+      }
+    ],
+    "programmingLanguages": [],
+    "tags": [],
+    "theme": [],
+    "solutionArea": [],
+    "communityTopic": [],
+    "learningZoneTopic": [],
+    "SpeakerTypes": [
+      {
+        "SpeakerType": "Executive In-person",
+        "SpeakerId": "f0e9effa-bb15-4644-bbfe-fce40797e93f",
+        "RegistrantKey": "f0e9effa-bb15-4644-bbfe-fce40797e93f"
+      },
+      {
+        "SpeakerType": "Executive In-person",
+        "SpeakerId": "99c77f57-0247-4ee3-828e-c99e643c8498",
+        "RegistrantKey": "99c77f57-0247-4ee3-828e-c99e643c8498"
+      }
+    ],
+    "repeatedSessions": [],
+    "relatedResources": [],
+    "nextStep": {
+      "link": "https://aka.ms/build25/plan/ai_agents_apps__data",
+      "backpackLink": null,
+      "label": "More on this topic",
+      "category": "Learn"
+    },
+    "event": [
+      {
+        "displayValue": null,
+        "logicalValue": null
+      }
+    ],
+    "sessionLanguage": [],
+    "viewingOptions": [
+      {
+        "displayValue": "Recorded",
+        "logicalValue": "Recorded"
+      }
+    ]
+  },
+  {
+    "@search.score": 1.0,
+    "partnerType": [],
+    "industry": [],
+    "businessFocus": [],
+    "product": [],
+    "lineOfBusiness": "",
+    "speakerNames": "Matthew Henderson, Govind Kamtamneni",
+    "canUserModifySchedule": true,
+    "hasFailoverVideoUrl": false,
+    "ssr": "",
+    "excludeFromSessionScheduler": false,
+    "doNotPublishVideo": false,
+    "localizedId": "en-US-de39c0ce-a3d7-4dff-bc03-14c73869ba82",
+    "langLocale": "en-US",
+    "sessionId": "de39c0ce-a3d7-4dff-bc03-14c73869ba82",
+    "sessionInstanceId": "de39c0ce-a3d7-4dff-bc03-14c73869ba82",
+    "sessionCode": "LAB344-R1",
+    "sessionCodeNormalized": "EN-US-LAB344-R1",
+    "title": "Build and deploy AI agents with MCP and Azure Functions",
+    "sortTitle": "build and deploy ai agents with mcp and azure functions",
+    "description": "This lab provides a comprehensive overview of building AI agents in Python. We will start by creating a single agent with Azure Functions and Azure AI Agent Service in Azure AI Foundry, then enhance it with Model Context Protocol (MCP) and add data grounding with Cosmos DB. Finally, you will combine the single agents to form a multi-agent system using Durable Functions in Azure Functions and deploy on Flex Consumption plan. The lab includes hands-on activities with practical insights for real-world applications.\n\nPlease RSVP and arrive at least 5 minutes before the start time, at which point remaining spaces are open to those in standby.",
+    "aiDescription": "",
+    "businessOutcome": "",
+    "businessOutcomeTwo": "",
+    "registrationLink": "",
+    "targetAudience": "",
+    "contentArea": [],
+    "sortRank": 4,
+    "location": "Arch, 800 Pike, Lower Level, Skagit 4",
+    "TimeSlot": "13:00 - 14:15",
+    "startDateTime": "2025-05-21T20:00:00Z",
+    "startDateTimeNullGroup": 1,
+    "endDateTime": "2025-05-21T21:15:00Z",
+    "durationInMinutes": 75,
+    "slideDeck": "",
+    "isMandatory": false,
+    "hasLiveStream": false,
+    "onDemand": "",
+    "hasOnDemand": false,
+    "downloadVideoLink": "",
+    "captionFileLink": "",
+    "onDemandThumbnail": "",
+    "speakerIds": [
+      "02e01cb7-c55d-49cc-9caa-ed33c5b6ed4b",
+      "1f5ad064-ecc9-431c-984d-2a8051774c9f"
+    ],
+    "sessionLinks": [],
+    "relatedSessionCodes": [],
+    "hasTeamsMeeting": false,
+    "hasTeamsLiveEvent": false,
+    "lastUpdate": "2025-09-14T20:35:11.904Z",
+    "heroSession": false,
+    "restrictedScopes": [],
+    "associatedCompanies": [],
+    "captionLanguage": [],
+    "audioLanguage": [],
+    "aslSupported": false,
+    "isExternalUrlSession": false,
+    "sessionType": {
+      "displayValue": "Lab",
+      "logicalValue": "Lab"
+    },
+    "topic": [
+      {
+        "displayValue": "Cloud Platform",
+        "logicalValue": "Cloud Platform"
+      }
+    ],
+    "sessionLevel": [
+      {
+        "displayValue": "Advanced (300)",
+        "logicalValue": "Advanced (300)"
+      }
+    ],
+    "audienceTypes": [],
+    "deliveryTypes": [
+      {
+        "displayValue": "In person",
+        "logicalValue": "In person"
+      }
+    ],
+    "programmingLanguages": [],
+    "tags": [],
+    "theme": [],
+    "solutionArea": [],
+    "communityTopic": [],
+    "learningZoneTopic": [],
+    "SpeakerTypes": [
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "02e01cb7-c55d-49cc-9caa-ed33c5b6ed4b",
+        "RegistrantKey": "02e01cb7-c55d-49cc-9caa-ed33c5b6ed4b"
+      },
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "1f5ad064-ecc9-431c-984d-2a8051774c9f",
+        "RegistrantKey": "1f5ad064-ecc9-431c-984d-2a8051774c9f"
+      }
+    ],
+    "repeatedSessions": [
+      {
+        "sessionId": "5d83b73c-f10c-4285-93da-7df3c0108001",
+        "sessionCode": "LAB344",
+        "startTime": "2025-05-19T21:45:00Z",
+        "endTime": "2025-05-19T23:00:00Z"
+      },
+      {
+        "sessionId": "7b48842c-43f3-4f22-9762-61f6dfe938d1",
+        "sessionCode": "LAB344-R2",
+        "startTime": "2025-05-21T23:30:00Z",
+        "endTime": "2025-05-22T00:45:00Z"
+      }
+    ],
+    "relatedResources": [
+      {
+        "link": "https://aka.ms/agent-orchestration-with-durable",
+        "backpackLink": null,
+        "label": "Agent Orchestration with Durable Functions",
+        "category": "Web link"
+      },
+      {
+        "link": "https://aka.ms/azure-functions-build2025",
+        "backpackLink": null,
+        "label": "Azure Functions Product Update at Build 2025",
+        "category": "Web link"
+      },
+      {
+        "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/build-ai-agent-tools-using-remote-mcp-with-azure-functions/4401059",
+        "backpackLink": null,
+        "label": "Azure Functions MCP extension",
+        "category": "Web link"
+      }
+    ],
+    "nextStep": {
+      "link": "https://aka.ms/build25/github/LAB344",
+      "backpackLink": null,
+      "label": "Sample code",
+      "category": "Code sample"
+    },
+    "event": [
+      {
+        "displayValue": null,
+        "logicalValue": null
+      }
+    ],
+    "sessionLanguage": [],
+    "viewingOptions": [
+      {
+        "displayValue": "Not recorded",
+        "logicalValue": "Not recorded"
+      }
+    ]
+  },
+  {
+    "@search.score": 1.0,
+    "partnerType": [],
+    "industry": [],
+    "businessFocus": [],
+    "product": [],
+    "lineOfBusiness": "",
+    "speakerNames": "",
+    "canUserModifySchedule": true,
+    "hasFailoverVideoUrl": false,
+    "ssr": "",
+    "excludeFromSessionScheduler": false,
+    "doNotPublishVideo": false,
+    "localizedId": "en-US-4e7783ec-4fa1-45c1-a271-d4d8a1c5179c",
+    "langLocale": "en-US",
+    "sessionId": "4e7783ec-4fa1-45c1-a271-d4d8a1c5179c",
+    "sessionInstanceId": "4e7783ec-4fa1-45c1-a271-d4d8a1c5179c",
+    "sessionCode": "ODLAB344",
+    "sessionCodeNormalized": "EN-US-ODLAB344",
+    "title": "On-Demand: Build and deploy AI agents with MCP and Azure Functions",
+    "sortTitle": "on-demand: build and deploy ai agents with mcp and azure functions",
+    "description": "This lab is offered on-demand in Arch, 800 Pike, Level 3, Tahoma 5 foyer.\n\nThis lab provides a comprehensive overview of building AI agents in Python. We will start by creating a single agent with Azure Functions and Azure AI Agent Service in Azure AI Foundry, then enhance it with Model Context Protocol (MCP) and add data grounding with Cosmos DB. Finally, you will combine the single agents to form a multi-agent system using Durable Functions in Azure Functions and deploy on Flex Consumption plan. The lab includes hands-on activities with practical insights for real-world applications.\n",
+    "aiDescription": "",
+    "businessOutcome": "",
+    "businessOutcomeTwo": "",
+    "registrationLink": "",
+    "targetAudience": "",
+    "contentArea": [],
+    "sortRank": 8,
+    "location": "Arch, 800 Pike, Level 3, Tahoma 5 foyer",
+    "TimeSlot": "",
+    "startDateTime": null,
+    "startDateTimeNullGroup": 0,
+    "endDateTime": null,
+    "durationInMinutes": 0,
+    "slideDeck": "",
+    "isMandatory": false,
+    "hasLiveStream": false,
+    "onDemand": "",
+    "hasOnDemand": false,
+    "downloadVideoLink": "",
+    "captionFileLink": "",
+    "onDemandThumbnail": "",
+    "speakerIds": [],
+    "sessionLinks": [],
+    "relatedSessionCodes": [],
+    "hasTeamsMeeting": false,
+    "hasTeamsLiveEvent": false,
+    "lastUpdate": "2025-09-14T20:35:11.904Z",
+    "heroSession": false,
+    "restrictedScopes": [],
+    "associatedCompanies": [],
+    "captionLanguage": [],
+    "audioLanguage": [],
+    "aslSupported": false,
+    "isExternalUrlSession": false,
+    "sessionType": {
+      "displayValue": "Lab",
+      "logicalValue": "Lab"
+    },
+    "topic": [
+      {
+        "displayValue": "Cloud Platform",
+        "logicalValue": "Cloud Platform"
+      }
+    ],
+    "sessionLevel": [
+      {
+        "displayValue": "Advanced (300)",
+        "logicalValue": "Advanced (300)"
+      }
+    ],
+    "audienceTypes": [],
+    "deliveryTypes": [
+      {
+        "displayValue": "In person",
+        "logicalValue": "In person"
+      }
+    ],
+    "programmingLanguages": [],
+    "tags": [],
+    "theme": [],
+    "solutionArea": [],
+    "communityTopic": [],
+    "learningZoneTopic": [],
+    "SpeakerTypes": [],
+    "repeatedSessions": [],
+    "relatedResources": [
+      {
+        "link": "https://aka.ms/agent-orchestration-with-durable",
+        "backpackLink": null,
+        "label": "Agent Orchestration with Durable Functions",
+        "category": "Web link"
+      },
+      {
+        "link": "https://aka.ms/azure-functions-build2025",
+        "backpackLink": null,
+        "label": "Azure Functions Product Update at Build 2025",
+        "category": "Web link"
+      },
+      {
+        "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/build-ai-agent-tools-using-remote-mcp-with-azure-functions/4401059",
+        "backpackLink": null,
+        "label": "Azure Functions MCP extension",
+        "category": "Web link"
+      }
+    ],
+    "nextStep": null,
+    "event": [
+      {
+        "displayValue": null,
+        "logicalValue": null
+      }
+    ],
+    "sessionLanguage": [],
+    "viewingOptions": [
+      {
+        "displayValue": "Not recorded",
+        "logicalValue": "Not recorded"
+      }
+    ]
+  },
+  {
+    "@search.score": 1.0,
+    "partnerType": [],
+    "industry": [],
+    "businessFocus": [],
+    "product": [],
+    "lineOfBusiness": "",
+    "speakerNames": "Yina Arenas, Paul Shealy",
+    "canUserModifySchedule": true,
+    "hasFailoverVideoUrl": false,
+    "ssr": "",
+    "excludeFromSessionScheduler": false,
+    "doNotPublishVideo": false,
+    "localizedId": "en-US-eaebed10-d9ef-4019-8a21-d376761e826f",
+    "langLocale": "en-US",
+    "sessionId": "eaebed10-d9ef-4019-8a21-d376761e826f",
+    "sessionInstanceId": "eaebed10-d9ef-4019-8a21-d376761e826f",
+    "sessionCode": "BRK154",
+    "sessionCodeNormalized": "EN-US-BRK154",
+    "title": "Developer essentials for agents and apps in Azure AI Foundry",
+    "sortTitle": "developer essentials for agents and apps in azure ai foundry",
+    "description": "Turn your AI ideas into production-ready solutions using a unified toolkit that seamlessly integrates Azure AI Foundry with VS Code, GitHub, and Copilot Studio. Experience faster development cycles, fewer bugs, and cost savings as you design, customize, and manage robust AI applications and agents, with ease.",
+    "aiDescription": "<p><b>Introduction to Azure AI and SDKs:</b> The session was led by leaders in product management and engineering for Azure AI. They introduced the functionalities of Azure AI Foundry, which is essential for developers working with AI. The discussion covered the comprehensive solutions provided by Azure AI in terms of models, tools, byte coding, SDKs, and APIs.</p>\n\n<p><b>Building an End-to-End Application:</b> The presenters used a hypothetical scenario involving a Contoso developer to demonstrate building an end-to-end application. This application aimed at processing input data from invoices using Azure AI Foundry. The walkthrough included generating invoices and converting them into structured data for a user-friendly application.</p>\n\n<p><b>Comprehensive Model Solutions:</b> Azure AI Foundry was highlighted as a robust platform offering a wide range of models from Azure Open AI and other leading providers. It supports developers with state-of-the-art models and a holistic platform to build comprehensive AI solutions, ranging from deploying to managing models without worrying about the underlying infrastructure.</b>\n\n<p><b>Integration Capabilities and Tools:</b> The session also touched upon the integration capabilities of Azure AI Foundry, which is designed to work seamlessly with other Azure services. This integration supports a variety of functionalities from data handling and AI service connections to deployment and scaling management, providing an end-to-end toolchain for developers.</p>\n\n<p><b>Real-time Application and Evaluation:</b> Furthermore, they showcased the process of building a real-time application, illustrating the connection and deployment phases using Azure AI Foundry and emphasizing the importance of evaluation and model management throughout the development cycle.</p>\n\n<p><b>Access to Resources and Getting Started:</b> The session concluded with pointers on accessing resources for further learning and a quick start guide to utilizing Azure AI Foundry effectively. Attendees were encouraged to explore further functionalities and integration capabilities to fully leverage Azure AI in their projects.</p>",
+    "businessOutcome": "",
+    "businessOutcomeTwo": "",
+    "registrationLink": "",
+    "targetAudience": "",
+    "contentArea": [],
+    "sortRank": 2,
+    "location": "Arch, 800 Pike, Level 3, Tahoma 4",
+    "TimeSlot": "11:45 - 12:45",
+    "startDateTime": "2025-05-20T18:45:00Z",
+    "startDateTimeNullGroup": 1,
+    "endDateTime": "2025-05-20T19:45:00Z",
+    "durationInMinutes": 60,
+    "slideDeck": "https://medius.microsoft.com/video/asset/PPT/6be78a43-6cd4-4368-88e9-704465d3305e",
+    "isMandatory": false,
+    "hasLiveStream": true,
+    "onDemand": "https://medius.microsoft.com/Embed/video-nc/6be78a43-6cd4-4368-88e9-704465d3305e",
+    "hasOnDemand": true,
+    "downloadVideoLink": "https://medius.microsoft.com/video/asset/HIGHMP4/6be78a43-6cd4-4368-88e9-704465d3305e",
+    "captionFileLink": "https://medius.microsoft.com/video/asset/Transcript/6be78a43-6cd4-4368-88e9-704465d3305e",
+    "onDemandThumbnail": "https://medius.microsoft.com/Embed/video-nc/6be78a43-6cd4-4368-88e9-704465d3305e",
+    "speakerIds": [
+      "0a453636-0fc3-484d-b98f-ceac4257262b",
+      "e3a79eb7-7e83-4e8e-8dff-1b5eb1cedd01"
+    ],
+    "sessionLinks": [],
+    "relatedSessionCodes": [
+      "DEM513"
+    ],
+    "hasTeamsMeeting": false,
+    "hasTeamsLiveEvent": false,
+    "lastUpdate": "2025-09-14T20:35:11.904Z",
+    "heroSession": false,
+    "restrictedScopes": [],
+    "associatedCompanies": [],
+    "captionLanguage": [],
+    "audioLanguage": [],
+    "aslSupported": false,
+    "isExternalUrlSession": false,
+    "sessionType": {
+      "displayValue": "Breakout",
+      "logicalValue": "Breakout"
+    },
+    "topic": [
+      {
+        "displayValue": "AI, Copilot & Agents",
+        "logicalValue": "AI, Copilot & Agents"
+      }
+    ],
+    "sessionLevel": [
+      {
+        "displayValue": "Intermediate (200)",
+        "logicalValue": "Intermediate (200)"
+      }
+    ],
+    "audienceTypes": [],
+    "deliveryTypes": [
+      {
+        "displayValue": "Online",
+        "logicalValue": "Online"
+      },
+      {
+        "displayValue": "In person",
+        "logicalValue": "In person"
+      }
+    ],
+    "programmingLanguages": [],
+    "tags": [
+      {
+        "displayValue": "GitHub",
+        "logicalValue": "GitHub"
+      },
+      {
+        "displayValue": "VS Code",
+        "logicalValue": "VS Code"
+      },
+      {
+        "displayValue": "Software Development Company ",
+        "logicalValue": "Software Development Company "
+      },
+      {
+        "displayValue": "Azure AI Foundry",
+        "logicalValue": "Azure AI Foundry"
+      }
+    ],
+    "theme": [],
+    "solutionArea": [],
+    "communityTopic": [],
+    "learningZoneTopic": [],
+    "SpeakerTypes": [
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "0a453636-0fc3-484d-b98f-ceac4257262b",
+        "RegistrantKey": "0a453636-0fc3-484d-b98f-ceac4257262b"
+      },
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "e3a79eb7-7e83-4e8e-8dff-1b5eb1cedd01",
+        "RegistrantKey": "e3a79eb7-7e83-4e8e-8dff-1b5eb1cedd01"
+      }
+    ],
+    "repeatedSessions": [],
+    "relatedResources": [],
+    "nextStep": null,
+    "event": [
+      {
+        "displayValue": null,
+        "logicalValue": null
+      }
+    ],
+    "sessionLanguage": [],
+    "viewingOptions": [
+      {
+        "displayValue": "Recorded",
+        "logicalValue": "Recorded"
+      }
+    ]
+  },
+  {
+    "@search.score": 1.0,
+    "partnerType": [],
+    "industry": [],
+    "businessFocus": [],
+    "product": [],
+    "lineOfBusiness": "",
+    "speakerNames": "Matthew Henderson, Govind Kamtamneni",
+    "canUserModifySchedule": true,
+    "hasFailoverVideoUrl": false,
+    "ssr": "",
+    "excludeFromSessionScheduler": false,
+    "doNotPublishVideo": false,
+    "localizedId": "en-US-5d83b73c-f10c-4285-93da-7df3c0108001",
+    "langLocale": "en-US",
+    "sessionId": "5d83b73c-f10c-4285-93da-7df3c0108001",
+    "sessionInstanceId": "5d83b73c-f10c-4285-93da-7df3c0108001",
+    "sessionCode": "LAB344",
+    "sessionCodeNormalized": "EN-US-LAB344",
+    "title": "Build and deploy AI agents with MCP and Azure Functions",
+    "sortTitle": "build and deploy ai agents with mcp and azure functions",
+    "description": "This lab provides a comprehensive overview of building AI agents in Python. We will start by creating a single agent with Azure Functions and Azure AI Agent Service in Azure AI Foundry, then enhance it with Model Context Protocol (MCP) and add data grounding with Cosmos DB. Finally, you will combine the single agents to form a multi-agent system using Durable Functions in Azure Functions and deploy on Flex Consumption plan. The lab includes hands-on activities with practical insights for real-world applications.\n\nPlease RSVP and arrive at least 5 minutes before the start time, at which point remaining spaces are open to those in standby.",
+    "aiDescription": "",
+    "businessOutcome": "",
+    "businessOutcomeTwo": "",
+    "registrationLink": "",
+    "targetAudience": "",
+    "contentArea": [],
+    "sortRank": 4,
+    "location": "Arch, 800 Pike, Level 3, Tahoma 2",
+    "TimeSlot": "14:45 - 16:00",
+    "startDateTime": "2025-05-19T21:45:00Z",
+    "startDateTimeNullGroup": 1,
+    "endDateTime": "2025-05-19T23:00:00Z",
+    "durationInMinutes": 75,
+    "slideDeck": "",
+    "isMandatory": false,
+    "hasLiveStream": false,
+    "onDemand": "",
+    "hasOnDemand": false,
+    "downloadVideoLink": "",
+    "captionFileLink": "",
+    "onDemandThumbnail": "",
+    "speakerIds": [
+      "02e01cb7-c55d-49cc-9caa-ed33c5b6ed4b",
+      "1f5ad064-ecc9-431c-984d-2a8051774c9f"
+    ],
+    "sessionLinks": [],
+    "relatedSessionCodes": [
+      "DEM541",
+      "BRK187",
+      "BRK189"
+    ],
+    "hasTeamsMeeting": false,
+    "hasTeamsLiveEvent": false,
+    "lastUpdate": "2025-09-14T20:35:11.904Z",
+    "heroSession": false,
+    "restrictedScopes": [],
+    "associatedCompanies": [],
+    "captionLanguage": [],
+    "audioLanguage": [],
+    "aslSupported": false,
+    "isExternalUrlSession": false,
+    "sessionType": {
+      "displayValue": "Lab",
+      "logicalValue": "Lab"
+    },
+    "topic": [
+      {
+        "displayValue": "Cloud Platform",
+        "logicalValue": "Cloud Platform"
+      }
+    ],
+    "sessionLevel": [
+      {
+        "displayValue": "Advanced (300)",
+        "logicalValue": "Advanced (300)"
+      }
+    ],
+    "audienceTypes": [],
+    "deliveryTypes": [
+      {
+        "displayValue": "In person",
+        "logicalValue": "In person"
+      }
+    ],
+    "programmingLanguages": [],
+    "tags": [],
+    "theme": [],
+    "solutionArea": [],
+    "communityTopic": [],
+    "learningZoneTopic": [],
+    "SpeakerTypes": [
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "02e01cb7-c55d-49cc-9caa-ed33c5b6ed4b",
+        "RegistrantKey": "02e01cb7-c55d-49cc-9caa-ed33c5b6ed4b"
+      },
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "1f5ad064-ecc9-431c-984d-2a8051774c9f",
+        "RegistrantKey": "1f5ad064-ecc9-431c-984d-2a8051774c9f"
+      }
+    ],
+    "repeatedSessions": [
+      {
+        "sessionId": "de39c0ce-a3d7-4dff-bc03-14c73869ba82",
+        "sessionCode": "LAB344-R1",
+        "startTime": "2025-05-21T20:00:00Z",
+        "endTime": "2025-05-21T21:15:00Z"
+      },
+      {
+        "sessionId": "7b48842c-43f3-4f22-9762-61f6dfe938d1",
+        "sessionCode": "LAB344-R2",
+        "startTime": "2025-05-21T23:30:00Z",
+        "endTime": "2025-05-22T00:45:00Z"
+      }
+    ],
+    "relatedResources": [
+      {
+        "link": "https://aka.ms/agent-orchestration-with-durable",
+        "backpackLink": null,
+        "label": "Agent Orchestration with Durable Functions",
+        "category": "Web link"
+      },
+      {
+        "link": "https://aka.ms/azure-functions-build2025",
+        "backpackLink": null,
+        "label": "Azure Functions Product Update at Build 2025",
+        "category": "Web link"
+      },
+      {
+        "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/build-ai-agent-tools-using-remote-mcp-with-azure-functions/4401059",
+        "backpackLink": null,
+        "label": "Azure Functions MCP extension",
+        "category": "Web link"
+      }
+    ],
+    "nextStep": {
+      "link": "https://aka.ms/build25/github/LAB344",
+      "backpackLink": null,
+      "label": "Sample code",
+      "category": "Code sample"
+    },
+    "event": [
+      {
+        "displayValue": null,
+        "logicalValue": null
+      }
+    ],
+    "sessionLanguage": [],
+    "viewingOptions": [
+      {
+        "displayValue": "Not recorded",
+        "logicalValue": "Not recorded"
+      }
+    ]
+  },
+  {
+    "@search.score": 1.0,
+    "partnerType": [],
+    "industry": [],
+    "businessFocus": [],
+    "product": [],
+    "lineOfBusiness": "",
+    "speakerNames": "Yina Arenas, Scott Hanselman",
+    "canUserModifySchedule": true,
+    "hasFailoverVideoUrl": false,
+    "ssr": "",
+    "excludeFromSessionScheduler": false,
+    "doNotPublishVideo": false,
+    "localizedId": "en-US-9c8d4e97-b47c-4cdd-a947-810b4f581738",
+    "langLocale": "en-US",
+    "sessionId": "9c8d4e97-b47c-4cdd-a947-810b4f581738",
+    "sessionInstanceId": "9c8d4e97-b47c-4cdd-a947-810b4f581738",
+    "sessionCode": "BRK155",
+    "sessionCodeNormalized": "EN-US-BRK155",
+    "title": "Azure AI Foundry: The AI app and Agent Factory",
+    "sortTitle": "azure ai foundry: the ai app and agent factory",
+    "description": "Join Azure AI Foundry's flagship session. Learn how to supercharge your AI development with our integrated signals loop that connects model choice, knowledge retrieval, fine-tuning, orchestration and memory \u2014anchored by observability and trust. Design, customize, and manage intelligent agents using open standards and protocols such as Model Context Protocol (MCP) and Agent-to-Agent (A2A) to connect with tools and drive collaboration. Gain insights into advanced orchestration, tracing, and monitoring to streamline decision-making, boost efficiency, accelerate time to market, and lower costs.",
+    "aiDescription": "**Overview of the event:** The event featured presentations and discussions centered on innovative technological developments, with a significant focus on artificial intelligence (AI). A host of engineers, marketeers, and data scientists collaborated to present live demos showcasing the capabilities and applications of Azure AI Foundry.\n\n**Introduction to Azure AI Foundry:** Azure AI Foundry was highlighted as an open, flexible, and secure platform designed to facilitate developers in integrating AI into various applications. It provides tools and platforms to convert ideas into coded solutions and eventually into deployable, operational software.\n\n**Core Features of Azure AI Foundry:** The platform supports developers through three main pillars. Firstly, it offers a broad range of AI models. Secondly, it provides an agentic platform that enables complex AI functions and workflows. Lastly, it includes comprehensive observability tools necessary for developers to monitor and troubleshoot their AI implementations effectively.\n\n**Practical Demonstrations and Case Studies:** The session demonstrated how Azure AI Foundry could automate and refine processes using AI, highlighting a real-world application involving the Hanselminutes podcast. The example illustrated how AI could be utilized to enhance productivity and reduce routine tasks like generating show notes and managing audio file transcripts.\n\n**Detailed Discussion on Models and Tools:** The session delved into various models available within Azure AI Foundry, discussing their functionalities and how they can be leveraged for different applications. Emphasis was placed on the importance of choosing the right model for specific tasks to optimize performance and cost-efficiency.\n\n**Conclusion and Future Directions:** The session concluded with insights into the future developments planned for Azure AI Foundry, stressing ongoing improvements and expansions. The aim is to make the platform more accessible and useful to a broader range of developers and industries, ensuring that AI integration becomes more streamlined and impactful across various sectors.",
+    "businessOutcome": "",
+    "businessOutcomeTwo": "",
+    "registrationLink": "",
+    "targetAudience": "",
+    "contentArea": [],
+    "sortRank": 2,
+    "location": "Arch, 705 Pike, Level 6, Room 6B",
+    "TimeSlot": "11:45 - 12:45",
+    "startDateTime": "2025-05-19T18:45:00Z",
+    "startDateTimeNullGroup": 1,
+    "endDateTime": "2025-05-19T19:45:00Z",
+    "durationInMinutes": 60,
+    "slideDeck": "https://medius.microsoft.com/video/asset/PPT/01d26ebd-1bfa-4379-bd4b-22292a9b9096",
+    "isMandatory": false,
+    "hasLiveStream": false,
+    "onDemand": "https://medius.microsoft.com/Embed/video-nc/01d26ebd-1bfa-4379-bd4b-22292a9b9096",
+    "hasOnDemand": true,
+    "downloadVideoLink": "https://medius.microsoft.com/video/asset/HIGHMP4/01d26ebd-1bfa-4379-bd4b-22292a9b9096",
+    "captionFileLink": "https://medius.microsoft.com/video/asset/Transcript/01d26ebd-1bfa-4379-bd4b-22292a9b9096",
+    "onDemandThumbnail": "https://medius.microsoft.com/Embed/video-nc/01d26ebd-1bfa-4379-bd4b-22292a9b9096",
+    "speakerIds": [
+      "0a453636-0fc3-484d-b98f-ceac4257262b",
+      "f0e9effa-bb15-4644-bbfe-fce40797e93f"
+    ],
+    "sessionLinks": [],
+    "relatedSessionCodes": [],
+    "hasTeamsMeeting": false,
+    "hasTeamsLiveEvent": false,
+    "lastUpdate": "2025-09-14T20:35:11.904Z",
+    "heroSession": false,
+    "restrictedScopes": [],
+    "associatedCompanies": [],
+    "captionLanguage": [],
+    "audioLanguage": [],
+    "aslSupported": false,
+    "isExternalUrlSession": false,
+    "sessionType": {
+      "displayValue": "Breakout",
+      "logicalValue": "Breakout"
+    },
+    "topic": [
+      {
+        "displayValue": "AI, Copilot & Agents",
+        "logicalValue": "AI, Copilot & Agents"
+      }
+    ],
+    "sessionLevel": [
+      {
+        "displayValue": "Intermediate (200)",
+        "logicalValue": "Intermediate (200)"
+      }
+    ],
+    "audienceTypes": [],
+    "deliveryTypes": [
+      {
+        "displayValue": "Online",
+        "logicalValue": "Online"
+      },
+      {
+        "displayValue": "In person",
+        "logicalValue": "In person"
+      }
+    ],
+    "programmingLanguages": [
+      {
+        "displayValue": "Java",
+        "logicalValue": "Java"
+      },
+      {
+        "displayValue": "C#",
+        "logicalValue": "C#"
+      },
+      {
+        "displayValue": "JavaScript/TypeScript",
+        "logicalValue": "JavaScript/TypeScript"
+      },
+      {
+        "displayValue": "Python",
+        "logicalValue": "Python"
+      }
+    ],
+    "tags": [
+      {
+        "displayValue": "Software Development Company ",
+        "logicalValue": "Software Development Company "
+      },
+      {
+        "displayValue": "Azure AI Foundry",
+        "logicalValue": "Azure AI Foundry"
+      }
+    ],
+    "theme": [],
+    "solutionArea": [],
+    "communityTopic": [],
+    "learningZoneTopic": [],
+    "SpeakerTypes": [
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "0a453636-0fc3-484d-b98f-ceac4257262b",
+        "RegistrantKey": "0a453636-0fc3-484d-b98f-ceac4257262b"
+      },
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "f0e9effa-bb15-4644-bbfe-fce40797e93f",
+        "RegistrantKey": "f0e9effa-bb15-4644-bbfe-fce40797e93f"
+      }
+    ],
+    "repeatedSessions": [],
+    "relatedResources": [],
+    "nextStep": {
+      "link": "https://aka.ms/build25/plan/CreateAgenticAISolutions",
+      "backpackLink": null,
+      "label": "More on this topic",
+      "category": "Learn"
+    },
+    "event": [
+      {
+        "displayValue": null,
+        "logicalValue": null
+      }
+    ],
+    "sessionLanguage": [],
+    "viewingOptions": [
+      {
+        "displayValue": "Recorded",
+        "logicalValue": "Recorded"
+      }
+    ]
+  },
+  {
+    "@search.score": 1.0,
+    "partnerType": [],
+    "industry": [],
+    "businessFocus": [],
+    "product": [],
+    "lineOfBusiness": "",
+    "speakerNames": "James Codella, PhD, Haiyang Xu",
+    "canUserModifySchedule": true,
+    "hasFailoverVideoUrl": false,
+    "ssr": "",
+    "excludeFromSessionScheduler": false,
+    "doNotPublishVideo": false,
+    "localizedId": "en-US-f09bc3ec-d991-4eec-ac62-1f5659d28db0",
+    "langLocale": "en-US",
+    "sessionId": "f09bc3ec-d991-4eec-ac62-1f5659d28db0",
+    "sessionInstanceId": "f09bc3ec-d991-4eec-ac62-1f5659d28db0",
+    "sessionCode": "DEM567",
+    "sessionCodeNormalized": "EN-US-DEM567",
+    "title": "Tips for fast vector and full-text search with Azure Cosmos DB",
+    "sortTitle": "tips for fast vector and full-text search with azure cosmos db",
+    "description": "Enable smarter and more intuitive information discovery in AI apps and analytics with Azure Cosmos DB. This coding session will show ways to balance accuracy and speed with full-text search for precise keyword matching; vector search for semantic understanding that captures the meaning behind queries, and hybrid search which uses the strengths of both to deliver enhanced relevance and contextual accuracy.",
+    "aiDescription": "<p><b>Introduction to Presenters and Azure Cosmos DB:</b> The webinar featured a discussion with two experts from the Azure Cosmos DB team. They aimed to share efficient strategies for implementing vector, full text, and hybrid search functionalities in Cosmos DB, which are recently enhanced features of the database.</p>\n\n<p><b>Capabilities and Performance:</b> Cosmos DB's scalability and the ability to handle complex search scenarios at scale were highlighted. The database can manage over a billion vectors with less than 100 milliseconds latency. Thanks to built-in vector indexing and powerful underlying architecture, Cosmos DB offers cost-effectiveness up to 41 times less than comparable solutions.</p>\n\n<p><b>Enhancements and Global Features:</b> The presenters discussed recent global updates including enterprise-grade robustness with features like 5-nines of availability, geo-replication, and fleet management in preview for DB containers. These features significantly enhance the reliability and effectiveness of database operations across different scenarios.</p>\n\n<p><b>Efficiency, Throughput, and Scalability:</b> Discussing the technical setup, the speakers emphasized the importance of provisioning sufficient throughput and utilizing features like bulk execution for efficient data ingestion. Azure Cosmos DB's auto-scaling capabilities and partition querying contribute to its superior performance and ability to manage large-scale operations efficiently.</p>\n\n<p><b>Hybrid Search and Flexibility:</b> They further showcased the hybrid search capability that combines vector and full-text search, providing users flexibility to tune queries for desired accuracy or latency. The ability to dynamically adjust parameters according to specific needs was also discussed, illustrating Cosmos DB's adaptability.</p>\n\n<p><b>Demo and Practical Insights:</b> A live demonstration highlighted the implementation of the mentioned features, showing actual code and the effect of different settings on query performance. This hands-on approach helped in understanding the practical application of the theoretical concepts discussed throughout the webinar.</p>",
+    "businessOutcome": "",
+    "businessOutcomeTwo": "",
+    "registrationLink": "",
+    "targetAudience": "",
+    "contentArea": [],
+    "sortRank": 6,
+    "location": "Arch, 705 Pike, Level 4, Hub, Theater B",
+    "TimeSlot": "14:20 - 14:35",
+    "startDateTime": "2025-05-21T21:20:00Z",
+    "startDateTimeNullGroup": 1,
+    "endDateTime": "2025-05-21T21:35:00Z",
+    "durationInMinutes": 15,
+    "slideDeck": "",
+    "isMandatory": false,
+    "hasLiveStream": false,
+    "onDemand": "https://medius.microsoft.com/Embed/video-nc/7ff5fa7a-04b4-4b36-94ec-96384f912c83",
+    "hasOnDemand": true,
+    "downloadVideoLink": "https://medius.microsoft.com/video/asset/HIGHMP4/7ff5fa7a-04b4-4b36-94ec-96384f912c83",
+    "captionFileLink": "https://medius.microsoft.com/video/asset/Caption/7ff5fa7a-04b4-4b36-94ec-96384f912c83",
+    "onDemandThumbnail": "https://medius.microsoft.com/Embed/video-nc/7ff5fa7a-04b4-4b36-94ec-96384f912c83",
+    "speakerIds": [
+      "7ce486c9-b5a3-4901-918b-7be6e3a82588",
+      "39a83d8d-7d31-4483-88bb-e185ef221104"
+    ],
+    "sessionLinks": [],
+    "relatedSessionCodes": [
+      "BRK202",
+      "BRK143",
+      "BRK212",
+      "LAB361"
+    ],
+    "hasTeamsMeeting": false,
+    "hasTeamsLiveEvent": false,
+    "lastUpdate": "2025-09-14T20:35:11.904Z",
+    "heroSession": false,
+    "restrictedScopes": [],
+    "associatedCompanies": [],
+    "captionLanguage": [],
+    "audioLanguage": [],
+    "aslSupported": false,
+    "isExternalUrlSession": false,
+    "sessionType": {
+      "displayValue": "Demo",
+      "logicalValue": "Demo Session"
+    },
+    "topic": [
+      {
+        "displayValue": "Data & Analytics",
+        "logicalValue": "Data & Analytics"
+      }
+    ],
+    "sessionLevel": [
+      {
+        "displayValue": "Expert (400)",
+        "logicalValue": "Expert (400)"
+      }
+    ],
+    "audienceTypes": [],
+    "deliveryTypes": [
+      {
+        "displayValue": "In person",
+        "logicalValue": "In person"
+      }
+    ],
+    "programmingLanguages": [
+      {
+        "displayValue": "Python",
+        "logicalValue": "Python"
+      }
+    ],
+    "tags": [],
+    "theme": [],
+    "solutionArea": [],
+    "communityTopic": [],
+    "learningZoneTopic": [],
+    "SpeakerTypes": [
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "7ce486c9-b5a3-4901-918b-7be6e3a82588",
+        "RegistrantKey": "7ce486c9-b5a3-4901-918b-7be6e3a82588"
+      },
+      {
+        "SpeakerType": "Speaker In-person",
+        "SpeakerId": "39a83d8d-7d31-4483-88bb-e185ef221104",
+        "RegistrantKey": "39a83d8d-7d31-4483-88bb-e185ef221104"
+      }
+    ],
+    "repeatedSessions": [],
+    "relatedResources": [
+      {
+        "link": "https://aka.ms/CosmosDB/VectorSearch",
+        "backpackLink": null,
+        "label": "Cost-Effective, Low Latency Vector Search with Azure Cosmos DB",
+        "category": "Web link"
+      },
+      {
+        "link": "https://aka.ms/CosmosDB/BillionScaleVectorSearch",
+        "backpackLink": null,
+        "label": "Azure Cosmos DB with DiskANN Part 2: Scaling to 1 Billion Vectors with <100ms Search Latency",
+        "category": "Web link"
+      }
+    ],
+    "nextStep": null,
+    "event": [
+      {
+        "displayValue": null,
+        "logicalValue": null
+      }
+    ],
+    "sessionLanguage": [],
+    "viewingOptions": [
+      {
+        "displayValue": "Recorded",
+        "logicalValue": "Recorded"
+      }
+    ]
+  }
+]

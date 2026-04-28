@@ -1,14 +1,39 @@
-# Project
+# Microsoft Build CLI
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+The Microsoft Build CLI is a [GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli) skill that connects your local project to the Microsoft Build session catalog. It reads your dependencies, finds relevant sessions, and helps you plan your Build experience — all from your terminal.
 
-As the maintainer of this project, please make a few updates:
+## Get Started
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+Open **GitHub Copilot CLI** in any project and run:
+
+```
+/plugin install microsoft/Build-CLI
+```
+
+Then try:
+
+```
+What Build sessions are relevant to my project?
+```
+
+The skill reads your `package.json`, `requirements.txt`, `.csproj`, or other dependency files, maps them to Microsoft products, and searches the live Build 2026 session catalog for matches.
+
+## What You Can Do
+
+| Ask the skill to... | Example |
+|---------------------|---------|
+| Find sessions for your project | *"What Build sessions should I attend?"* |
+| See what's new for your tech stack | *"What's new at Build for Azure Cosmos DB?"* |
+| Look up a session by code | *"Tell me about session BRK155"* |
+| Get next steps after a session | *"What should I do after session BRK155?"* |
+| Scaffold a project from a session | *"Scaffold a project from session BRK155"* |
+| Log notes during the event | *"Log a note from session BRK155: great agent demo"* |
+
+## How It Works
+
+The skill pulls session data from the **live Build 2026 catalog** — no stale data, no manual updates. For SDK docs and code samples, it uses the **Microsoft Learn MCP Server**.
+
+If you have **Node.js 22+** installed, the skill automatically uses the `@microsoft/events-cli` for faster local search and caching. Without Node.js, it falls back to direct HTTP — everything still works.
 
 ## Contributing
 

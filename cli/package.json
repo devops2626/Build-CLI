@@ -1,0 +1,45 @@
+{
+  "name": "@microsoft/events-cli",
+  "version": "0.1.0",
+  "description": "CLI for searching Microsoft flagship event sessions (Build, Ignite).",
+  "type": "module",
+  "bin": {
+    "msevents": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "microsoft",
+    "events",
+    "build",
+    "ignite",
+    "sessions",
+    "cli"
+  ],
+  "author": "Microsoft",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdebruin/microsoft-events-skill.git",
+    "directory": "cli"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "env-paths": "^4.0.0",
+    "minisearch": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  }
+}
