@@ -1,11 +1,13 @@
 ---
 name: build-companion
 description: >-
-  Your companion for Microsoft Build 2026. Helps you find Build sessions
-  relevant to your project, discover what's new for your tech stack, scaffold
-  projects from sessions, and plan your Build schedule. Activate when users
-  mention sessions, schedule, what's new, Build, or reference a session code.
-  Uses the msevents CLI for fast local search and Learn MCP Server for docs.
+  Your companion for Microsoft Build 2026. Helps you find sessions relevant to
+  your project, discover what's new for your tech stack, scaffold projects from
+  sessions, and plan your event schedule. Activate when users mention sessions,
+  schedule, what's new, Build, Ignite, AI Tour, Microsoft event, conference, or
+  reference a session code (BRK, DEM, LAB, KEY). Also supports Ignite 2025 and
+  Build 2025 session catalogs. Uses the msevents CLI for fast local search and
+  Learn MCP Server for docs.
 license: Apache-2.0
 compatibility: >-
   Prefers the msevents CLI (`npx @microsoft/events-cli`) for session catalog
@@ -23,20 +25,59 @@ allowed-tools: microsoft_docs_search microsoft_docs_fetch microsoft_code_sample_
 
 # Microsoft Build CLI
 
-> To adapt this skill for a different event (e.g., Ignite 2025), update the event context block below and the frontmatter name/description above.
+> This skill supports multiple Microsoft events. Build 2026 is the default. When the user asks about a different event, use the appropriate event ID and endpoint from the table below.
 
 ## Event context
+
+### Default event
 
 | Setting | Value |
 |---------|-------|
 | Event | Build 2026 |
 | Event ID | `build-2026` |
 | Dates | June 2-3, 2026 |
-| Catalog endpoint | `https://eventtools.event.microsoft.com/build2026-prod/fallback/session-all-en-us.json` |
+| Location | San Francisco, CA |
+| Timezone | Pacific Daylight Time (PDT, UTC-7) |
+| Catalog endpoint | `https://aka.ms/build2026-session-info` |
 | Book of News | `https://news.microsoft.com/build-2026-book-of-news/` |
 | Default CLI flag | `--event build-2026` |
 
-Use these values throughout. When the skill says "Build," it means this event. CLI commands should include `--event build-2026` by default.
+### Supported events
+
+| Event | Event ID | Catalog Endpoint | Location | Timezone |
+|-------|----------|-----------------|----------|----------|
+| Build 2026 | `build-2026` | `https://aka.ms/build2026-session-info` | San Francisco, CA | PDT (UTC-7) |
+| Ignite 2025 | `ignite-2025` | `https://aka.ms/ignite2025-session-info` | Chicago, IL | CST (UTC-6) |
+| Build 2025 | `build-2025` | `https://aka.ms/build2025-session-info` | Seattle, WA | PDT (UTC-7) |
+
+### Time and date handling
+
+The session catalog handles time differently depending on whether an event's schedule has been finalized:
+
+**When `startDateTime` is populated** (e.g., past events like Ignite 2025):
+- Use `startDateTime`/`endDateTime` for exact date and time (ISO 8601, UTC).
+- The `TimeSlot` field shows **local event time** (e.g., "11:00 - 11:45" for an 11 AM session in Chicago).
+- Group sessions by date extracted from `startDateTime`.
+
+**When `startDateTime` is null** (e.g., upcoming events before schedule is finalized):
+- The `TimeSlot` field contains times but no date assignment.
+- Tell the user upfront: "Day assignments aren't in the catalog yet — showing times only."
+- Present sessions grouped by time slot, not by day.
+- The times in `TimeSlot` may be UTC — apply the event timezone offset if times don't fall within normal conference hours (9 AM–6 PM local).
+- Once `startDateTime` is populated closer to the event, day grouping will work automatically.
+
+**Timezone reference:**
+| Event | Location | Timezone | UTC Offset |
+|-------|----------|----------|------------|
+| Build 2026 | San Francisco, CA | PDT | UTC-7 |
+| Ignite 2025 | Chicago, IL | CST | UTC-6 |
+| Build 2025 | Seattle, WA | PDT | UTC-7 |
+
+**Always display times in the event's local timezone** (e.g., "2:30 PM PDT" not "21:30 UTC"). Users are planning their in-person schedule.
+
+When the user mentions a specific event by name, use its event ID for CLI commands (`--event <id>`) and its endpoint for direct fetch. If no event is specified, default to Build 2026.
+
+Use these values throughout. When the skill says "Build," it means Build 2026. CLI commands should include `--event build-2026` by default unless the user specifies another event.
 
 Helps developers find Build sessions relevant to their projects, discover what's new for their tech stack, scaffold projects from session content, and plan their Build schedule — all based on what they're actually building.
 
@@ -53,15 +94,17 @@ Two live data sources, no static files:
 
 Activate when the user:
 
-- Mentions sessions, schedule, or anything about Build
+- Mentions sessions, schedule, or anything about Build, Ignite, or AI Tour
+- Asks about a Microsoft flagship event or conference
 - Asks what's new for their project or tech stack
 - Asks what changed in their dependencies or what updates are relevant to their code
 - Wants to find sessions relevant to their work
 - Asks to scaffold or start a project based on a session
-- Asks for help planning their Build schedule
+- Asks for help planning their Build schedule or event schedule
 - Asks what to do after attending a session, or wants next steps
 - Wants to log notes or takeaways from a session
 - References a session code (BRK, DEM, LAB, KEY, etc.)
+- Asks to create or export their schedule as a markdown file
 
 Do not activate when the user:
 
@@ -121,9 +164,13 @@ The CLI caches session data locally. On first use it fetches automatically — n
 If the CLI is not available (not installed, npx fails), fall back to fetching the session catalog directly:
 
 ```
-# Pattern: https://eventtools.event.microsoft.com/{event}{year}-prod/fallback/session-all-en-us.json
-GET https://eventtools.event.microsoft.com/build2026-prod/fallback/session-all-en-us.json
-GET https://eventtools.event.microsoft.com/build2026-prod/fallback/session-all-en-us.json
+# Use the aka.ms links from the supported events table above
+# Build 2026 (default):
+GET https://aka.ms/build2026-session-info
+# Ignite 2025:
+GET https://aka.ms/ignite2025-session-info
+# Build 2025:
+GET https://aka.ms/build2025-session-info
 ```
 
 The response is a JSON array of session objects. Key fields:
@@ -374,6 +421,48 @@ The user wants to capture takeaways during or after a session.
 4. If session lookup fails, write the entry without enrichment — don't block note-taking on data access.
 5. Confirm briefly: "Saved your note on BRK241 to journal/2026-05-19.md."
 
+### "Create my schedule" / "Export my schedule"
+
+The user wants to see their planned sessions organized by day and time, and optionally save as a markdown file.
+
+1. If the user has already identified sessions (via "find sessions for me" or by listing codes), use those. Otherwise, ask what sessions they're interested in.
+2. Look up each session via CLI or catalog to get time slots, locations, and metadata.
+3. Group sessions by day, sort by start time within each day.
+4. Flag conflicts (overlapping time slots) and suggest alternatives.
+5. **Present the schedule to the user first** — display it in the conversation so they can review, adjust, add, or remove sessions.
+6. After presenting, ask: "Would you like me to save this as `schedule.md`?" Do NOT create a file until the user confirms.
+7. If the user confirms, write to `schedule.md` (or a user-specified filename) in the current directory:
+
+```markdown
+# My Build 2026 Schedule
+
+## Day 1 — Monday, June 2
+
+| Time | Session | Title | Location |
+|------|---------|-------|----------|
+| 09:00–10:00 | KEY001 | Opening Keynote | Hall A |
+| 11:00–12:00 | BRK223 | From rows to reasoning: Designing databases for AI apps | Room 301 |
+| 14:00–15:30 | LAB511 | Create advanced Postgres-powered agentic apps | Lab Room 2 |
+
+### Notes
+- 30 min gap between KEY001 and BRK223 — grab coffee
+- LAB511 requires laptop setup (see prerequisites)
+
+## Day 2 — Tuesday, June 3
+
+| Time | Session | Title | Location |
+|------|---------|-------|----------|
+| 09:00–10:00 | BRK155 | Building AI agents with Semantic Kernel | Room 201 |
+| 11:00–12:00 | DEM310 | Ship code faster with AI-powered schema design | Demo Theater |
+
+---
+
+*Generated by Build Companion on YYYY-MM-DD*
+```
+
+8. Offer to update the schedule if the user adds or removes sessions later.
+9. For non-Build events (Ignite, AI Tour), adjust the title and dates accordingly.
+
 ## Context before recommendations
 
 Before recommending sessions or documentation, establish what the developer actually uses. Do not skip this step.
@@ -474,7 +563,9 @@ A good response from this skill:
 | Microsoft Ignite | `https://ignite.microsoft.com/` |
 | msevents CLI | `npx @microsoft/events-cli` |
 | CLI source | `../../cli/` |
-| Build 2026 session catalog | `https://eventtools.event.microsoft.com/build2026-prod/fallback/session-all-en-us.json` |
+| Build 2026 session catalog | `https://aka.ms/build2026-session-info` |
+| Build 2025 session catalog | `https://aka.ms/build2025-session-info` |
+| Ignite 2025 session catalog | `https://aka.ms/ignite2025-session-info` |
 | Build 2026 Book of News | `https://news.microsoft.com/build-2026-book-of-news/` |
 | Ignite 2025 Book of News | `https://news.microsoft.com/ignite-2025-book-of-news/` |
 | Book of News pattern | `https://news.microsoft.com/{event}-{year}-book-of-news/` |
