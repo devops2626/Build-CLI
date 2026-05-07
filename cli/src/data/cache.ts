@@ -16,6 +16,11 @@ const FAILURE_REVALIDATION_INTERVAL_MS = 15 * MINUTE_MS;
 const MAX_FAILURE_REVALIDATION_INTERVAL_MS = 2 * HOUR_MS;
 const JITTER_RATIO = 0.2;
 
+export interface FetchAndCacheOptions {
+  force?: boolean;
+  log?: (message: string) => void;
+}
+
 function cacheDir(): string {
   return process.env.MSEVENTS_CACHE_DIR ?? paths.cache;
 }
@@ -42,6 +47,14 @@ function withJitter(intervalMs: number): number {
   const jitter = intervalMs * JITTER_RATIO;
   const offset = (Math.random() * 2 - 1) * jitter;
   return Math.max(MINUTE_MS, Math.round(intervalMs + offset));
+}
+
+function formatSessionCount(count: number): string {
+  return `${count} session${count === 1 ? '' : 's'}`;
+}
+
+function formatResponseStatus(response: Response): string {
+  return [response.status, response.statusText].filter(Boolean).join(' ');
 }
 
 function intervalForStableCatalog(meta: CacheMeta, now: Date): number {
@@ -111,18 +124,34 @@ export async function readSessions(eventId: string): Promise<Session[]> {
   }
 }
 
-export async function fetchAndCache(event: EventConfig, force: boolean = false): Promise<Session[]> {
+export async function fetchAndCache(
+  event: EventConfig,
+  options: FetchAndCacheOptions = {},
+): Promise<Session[]> {
   await ensureCacheDir();
 
+  const { force = false, log } = options;
   const existingMeta = await readMeta(event.id);
   const existingSessions = await readSessions(event.id);
   const headers: Record<string, string> = {};
   const canRevalidate = !force && existingMeta !== null && existingSessions.length > 0;
 
+  log?.(existingSessions.length > 0
+    ? `  Local cache: found ${formatSessionCount(existingSessions.length)}.\n`
+    : '  Local cache: missing.\n');
+
   // Conditional GET if we have prior data and not forcing
   if (canRevalidate) {
     if (existingMeta.etag) headers['If-None-Match'] = existingMeta.etag;
     if (existingMeta.lastModified) headers['If-Modified-Since'] = existingMeta.lastModified;
+  }
+
+  if (force) {
+    log?.('  Remote check: full GET (--force).\n');
+  } else if (canRevalidate) {
+    log?.('  Remote check: conditional GET.\n');
+  } else {
+    log?.('  Remote check: GET.\n');
   }
 
   let response: Response;
@@ -152,15 +181,22 @@ export async function fetchAndCache(event: EventConfig, force: boolean = false):
     };
     checkedMeta.nextCheckAt = nextCheckAt(checkedMeta, 'not-modified', now);
     await writeMeta(event.id, checkedMeta);
+    log?.('  Remote catalog: not modified (304 Not Modified).\n');
+    log?.('  JSON download: no.\n');
+    log?.(`  Local cache: up to date; using ${formatSessionCount(existingSessions.length)}.\n`);
     return existingSessions;
   }
 
   if (!response.ok) {
+    log?.(`  Remote catalog: failed (${formatResponseStatus(response)}).\n`);
     throw new FetchError(
       `${event.endpoint} returned ${response.status}`,
       response.status,
     );
   }
+
+  log?.(`  Remote catalog: downloaded (${formatResponseStatus(response)}).\n`);
+  log?.('  JSON download: yes.\n');
 
   let raw: unknown;
   try {
@@ -195,6 +231,7 @@ export async function fetchAndCache(event: EventConfig, force: boolean = false):
 
   await writeFile(sessionsPath(event.id), JSON.stringify(sessions));
   await writeMeta(event.id, meta);
+  log?.(`  Local cache: ${existingSessions.length > 0 ? 'updated' : 'created'} with ${formatSessionCount(sessions.length)}.\n`);
 
   return sessions;
 }

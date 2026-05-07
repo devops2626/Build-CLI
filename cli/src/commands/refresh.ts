@@ -16,9 +16,13 @@ export async function refresh(eventFilter?: string, force: boolean = false): Pro
 
   for (const event of events) {
     try {
-      process.stderr.write(`Fetching ${event.name}...`);
-      const sessions = await fetchAndCache(event, force);
-      process.stderr.write(` ${sessions.length} sessions cached.\n`);
+      process.stderr.write(`Checking ${event.name}...\n`);
+      await fetchAndCache(event, {
+        force,
+        log: (message) => {
+          process.stderr.write(message);
+        },
+      });
     } catch (err) {
       if (err instanceof FetchError) {
         process.stderr.write(` failed: ${err.message}\n`);

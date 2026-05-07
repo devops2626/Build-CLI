@@ -3,6 +3,7 @@ import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { ensureCache } from '../src/commands/common.js';
+import { refresh } from '../src/commands/refresh.js';
 import { getAllCachedSessions, readMeta } from '../src/data/cache.js';
 import type { CacheMeta, RawSession, Session } from '../src/contracts.js';
 
@@ -50,11 +51,18 @@ function meta(eventId: string, overrides: Partial<CacheMeta> = {}): CacheMeta {
 function jsonResponse(raw: RawSession[], headers: Record<string, string> = {}): Response {
   return new Response(JSON.stringify(raw), {
     status: 200,
+    statusText: 'OK',
     headers: {
       'content-type': 'application/json',
       ...headers,
     },
   });
+}
+
+function stderrOutput(): string {
+  return vi.mocked(process.stderr.write).mock.calls
+    .map(([chunk]) => String(chunk))
+    .join('');
 }
 
 describe('automatic cache revalidation', () => {
@@ -182,5 +190,81 @@ describe('automatic cache revalidation', () => {
       await readFile(join(cacheDir, 'build-2026-sessions.json'), 'utf-8'),
     ) as Session[];
     expect(cachedJson[0]?.event).toBe('build-2026');
+  });
+
+  it('reports unchanged refreshes when the remote catalog returns 304', async () => {
+    await writeCachedEvent('build-2026');
+    const fetchMock = vi.fn().mockResolvedValue(new Response(null, { status: 304 }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await refresh('build-2026');
+
+    expect(stderrOutput()).toContain(
+      'Checking Microsoft Build 2026...\n' +
+        '  Local cache: found 1 session.\n' +
+        '  Remote check: conditional GET.\n' +
+        '  Remote catalog: not modified (304 Not Modified).\n' +
+        '  JSON download: no.\n' +
+        '  Local cache: up to date; using 1 session.\n',
+    );
+  });
+
+  it('reports updated refreshes when the remote catalog returns new content', async () => {
+    await writeCachedEvent('build-2026');
+    const fetchMock = vi.fn().mockResolvedValue(jsonResponse(
+      [{ sessionCode: 'BRK202', title: 'Updated Build 2026 session' }],
+      { etag: '"2026"', 'last-modified': 'Thu, 07 May 2026 02:56:00 GMT' },
+    ));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await refresh('build-2026');
+
+    expect(stderrOutput()).toContain(
+      'Checking Microsoft Build 2026...\n' +
+        '  Local cache: found 1 session.\n' +
+        '  Remote check: conditional GET.\n' +
+        '  Remote catalog: downloaded (200 OK).\n' +
+        '  JSON download: yes.\n' +
+        '  Local cache: updated with 1 session.\n',
+    );
+  });
+
+  it('reports cached refreshes when there was no local cache', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(jsonResponse(
+      [{ sessionCode: 'BRK202', title: 'Build 2026 session' }],
+      { etag: '"2026"', 'last-modified': 'Thu, 07 May 2026 02:56:00 GMT' },
+    ));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await refresh('build-2026');
+
+    expect(stderrOutput()).toContain(
+      'Checking Microsoft Build 2026...\n' +
+        '  Local cache: missing.\n' +
+        '  Remote check: GET.\n' +
+        '  Remote catalog: downloaded (200 OK).\n' +
+        '  JSON download: yes.\n' +
+        '  Local cache: created with 1 session.\n',
+    );
+  });
+
+  it('reports forced refreshes as downloaded JSON', async () => {
+    await writeCachedEvent('build-2026');
+    const fetchMock = vi.fn().mockResolvedValue(jsonResponse(
+      [{ sessionCode: 'BRK202', title: 'Build 2026 session' }],
+      { etag: '"2026"', 'last-modified': 'Thu, 07 May 2026 02:56:00 GMT' },
+    ));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await refresh('build-2026', true);
+
+    expect(stderrOutput()).toContain(
+      'Checking Microsoft Build 2026...\n' +
+        '  Local cache: found 1 session.\n' +
+        '  Remote check: full GET (--force).\n' +
+        '  Remote catalog: downloaded (200 OK).\n' +
+        '  JSON download: yes.\n' +
+        '  Local cache: updated with 1 session.\n',
+    );
   });
 });

@@ -53,9 +53,9 @@ Available commands:
   - `--limit <n>` max results (default: 10)
 - `session <code>` looks up a specific session by code. Searches all cached events; disambiguates if the code appears in multiple events.
   - `--event <id>` scope to a specific event
-- `refresh` downloads and caches session catalogs.
-  - `--event <id>` refresh a specific event only
-  - `--force` bypass cache, re-fetch unconditionally
+- `refresh` checks for session catalog updates and updates the local cache.
+  - `--event <id>` check a specific event only
+  - `--force` bypass conditional revalidation and re-fetch unconditionally
 - `status` shows what's cached and how fresh it is.
 
 The `sessions` and `session` commands output human-readable text by default. Pass `--json` to get structured JSON, which is useful for piping to agents or other tools:

@@ -15,9 +15,9 @@ program
 
 program
   .command('refresh')
-  .description('Fetch and cache session catalogs')
-  .option('--event <id>', 'Refresh a specific event (e.g., build-2025)')
-  .option('--force', 'Bypass cache and re-fetch', false)
+  .description('Check for session catalog updates')
+  .option('--event <id>', 'Check a specific event (e.g., build-2025)')
+  .option('--force', 'Bypass conditional revalidation and re-fetch', false)
   .action(async (opts: { event?: string; force: boolean }) => {
     await refresh(opts.event, opts.force);
   });
