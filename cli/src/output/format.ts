@@ -79,8 +79,12 @@ export function formatStatus(
   return statuses
     .map(({ eventId, meta }) => {
       if (!meta) return `  ${eventId}: not cached`;
-      const age = formatAge(Date.now() - new Date(meta.fetchedAt).getTime());
-      return `  ${eventId}: ${meta.sessionCount} sessions, cached ${age}`;
+      const cachedAge = formatAge(Date.now() - new Date(meta.fetchedAt).getTime());
+      const checkedAge = meta.checkedAt
+        ? `, checked ${formatAge(Date.now() - new Date(meta.checkedAt).getTime())}`
+        : '';
+      const status = meta.lastCheckStatus === 'failed' ? ', last check failed' : '';
+      return `  ${eventId}: ${meta.sessionCount} sessions, cached ${cachedAge}${checkedAge}${status}`;
     })
     .join('\n');
 }

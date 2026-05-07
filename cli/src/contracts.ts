@@ -50,12 +50,24 @@ export interface EventConfig {
   endpoint: string;
 }
 
+export type CacheCheckStatus = 'updated' | 'not-modified' | 'failed';
+
 export interface CacheMeta {
   eventId: string;
+  /**
+   * When session content was last downloaded and written locally.
+   * Kept as fetchedAt for compatibility with existing cache metadata.
+   */
   fetchedAt: string;
+  /** Last time the remote catalog was checked, including 304 responses. */
+  checkedAt?: string;
+  /** Next time search commands may revalidate this cache. */
+  nextCheckAt?: string;
   sessionCount: number;
   etag?: string;
   lastModified?: string;
+  lastCheckStatus?: CacheCheckStatus;
+  consecutiveFailures?: number;
 }
 
 export interface SearchResult {
