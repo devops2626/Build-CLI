@@ -8,6 +8,8 @@ body:
       value: |
         The Build skill uses natural language, so results can vary. If it handled your request poorly, let us know — this helps us tune the experience.
 
+        ⚠️ **Do not include API keys, tokens, or other credentials in your report.** This is a public repo.
+
   - type: textarea
     id: prompt-used
     attributes:

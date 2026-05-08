@@ -8,6 +8,8 @@ body:
       value: |
         Thanks for taking the time to report this! Please fill in what you can — any detail helps us reproduce and fix the issue.
 
+        ⚠️ **Do not include API keys, tokens, or other credentials in your report.** This is a public repo.
+
   - type: textarea
     id: what-happened
     attributes:
