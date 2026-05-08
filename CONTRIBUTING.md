@@ -13,7 +13,7 @@ Pull requests are welcome for bug fixes and documentation improvements. For larg
 1. Fork the repository
 2. Create a feature branch (`git checkout -b my-fix`)
 3. Make your changes
-4. Test locally with `npx @anthropic-ai/copilot-cli` or GitHub Copilot CLI
+4. Test locally with the GitHub Copilot CLI, following the README instructions
 5. Submit a pull request
 
 ## Contributor License Agreement
