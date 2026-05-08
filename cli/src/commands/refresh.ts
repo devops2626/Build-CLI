@@ -7,13 +7,6 @@ export async function refresh(eventFilter?: string, force: boolean = false): Pro
     ? KNOWN_EVENTS.filter((e) => e.id === eventFilter)
     : KNOWN_EVENTS;
 
-  if (events.length === 0) {
-    console.error(`Unknown event: ${eventFilter}`);
-    console.error(`Known events: ${KNOWN_EVENTS.map((e) => e.id).join(', ')}`);
-    process.exitCode = 1;
-    return;
-  }
-
   for (const event of events) {
     try {
       process.stderr.write(`Checking ${event.name}...\n`);
