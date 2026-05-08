@@ -6,11 +6,11 @@ This is the Microsoft Build CLI skill for GitHub Copilot CLI. It helps you disco
 
 ### Questions and general discussion
 
-Head to [Discussions](https://github.com/microsoft/Build-CLI/discussions) — the community and maintainers are there to help.
+Head to [Discussions](/discussions) — the community and maintainers are there to help.
 
 ### Bugs and feature requests
 
-Use [Issues](https://github.com/microsoft/Build-CLI/issues/new/choose) to report problems or suggest improvements. We have templates to help you provide the right information.
+Use [Issues](/issues/new/choose) to report problems or suggest improvements. We have templates to help you provide the right information.
 
 ### Quick troubleshooting
 
@@ -24,4 +24,4 @@ This re-fetches the latest skill and plugin configuration from the repo.
 
 ## Microsoft Support Policy
 
-Support for this project is limited to the resources listed above. This is an event-scoped tool maintained by the Microsoft Learn Partnerships team.
+Support for this project is limited to the resources listed above. This is an event-scoped tool maintained by the Microsoft Learn partnerships team.
