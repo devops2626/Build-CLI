@@ -4,13 +4,15 @@ The Microsoft Build CLI is a [GitHub Copilot CLI](https://docs.github.com/en/cop
 
 ## Get Started
 
-Open **GitHub Copilot CLI** in any project and run:
+1. Open **GitHub Copilot CLI** in any project and run:
 
 ```
 /plugin install microsoft/Build-CLI
 ```
 
-Then try:
+2. Restart your Copilot CLI session (exit and reopen).
+
+3. Try:
 
 ```
 What Build sessions are relevant to my project?
@@ -34,6 +36,8 @@ The skill reads your `package.json`, `requirements.txt`, `.csproj`, or other dep
 The skill pulls session data from the **live Build 2026 catalog** — no stale data, no manual updates. For SDK docs and code samples, it uses the **Microsoft Learn MCP Server**.
 
 If you have **Node.js 22+** installed, the skill automatically uses the `@microsoft/events-cli` for faster local search and caching. Without Node.js, it falls back to direct HTTP — everything still works.
+
+Session results are a starting point — for broad topics, ask the agent to refine ("show me more Foundry sessions about observability") or browse the full catalog at [build.microsoft.com/sessions](https://build.microsoft.com/sessions).
 
 ## Contributing
 
