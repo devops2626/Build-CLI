@@ -50,7 +50,6 @@ The skill reads `package.json`, `requirements.txt`, `.csproj`, `go.mod`, and oth
 |------------------------------------------|-------------------------------------------------------|
 | Scaffold a project from a session        | *"Scaffold a project from session BRK155"*            |
 | Diff your repo against Build updates     | *"What changed at Build for my dependencies?"*        |
-| Review your journal                      | *"Show my Build notes"*                               |
 
 ## How It Works
 
