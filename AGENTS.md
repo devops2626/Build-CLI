@@ -11,14 +11,16 @@ The repo publishes plugin metadata for GitHub Copilot and Claude Code. Keep shar
 - `.mcp.json` — Microsoft Learn MCP endpoint config
 - `cli\` — source for the `@microsoft/events-cli` package used by the skill
 
-**GitHub Copilot** — `.github\plugin\plugin.json` is the Copilot marketplace manifest and points at the repo root.
-
-**Claude Code** — `.claude-plugin\plugin.json` defines the Claude Code plugin package; `.claude-plugin\marketplace.json` defines Claude Code marketplace publishing metadata.
+**Versioned plugin manifests**:
+- **GitHub Copilot** — `.github\plugin\plugin.json` is the Copilot marketplace manifest and points at the repo root.
+- **Claude Code** — `.claude-plugin\plugin.json` defines the Claude Code plugin package; `.claude-plugin\marketplace.json` defines Claude Code marketplace publishing metadata.
 
 ## Sync rules
 
 - Event support is duplicated by design between the CLI and skill docs. When adding, removing, or renaming events, update `cli\src\config.ts`, the supported/default event guidance in `skills\microsoft-build\SKILL.md`, and affected tests/docs together.
 - Treat `skills\microsoft-build\SKILL.md` as the product contract for event-session behavior. For Build, Ignite, or event-session work: default "Build" to `build-2026`, get session metadata from the live catalog through `msevents` or the endpoint, get SDK/API facts from Microsoft Learn MCP, and never invent session IDs, speakers, schedules, or links.
+- Versioning gate: any meaningful `skills\microsoft-build\SKILL.md` change (agent behavior, commands/examples agents may follow, supported/default events, CLI/MCP/catalog usage, or user-facing workflow guidance) must bump both versioned plugin manifests to the same value; patch bumps are fine for guidance-only changes.
+- PR review gate: GitHub Copilot/code reviewers should flag meaningful `SKILL.md` changes without synced plugin version bumps, and any plugin version drift. Typo/format-only skill edits may skip the bump only when the PR explicitly says so.
 - Keep README install/client guidance aligned with plugin manifest, skill, MCP, or CLI behavior changes.
 
 ## CLI
@@ -37,6 +39,8 @@ npm run smoke:fixture
 ```
 
 `npm run smoke:live` hits the live catalog; CI only runs it outside pull requests.
+
+Note: The first time `npx @microsoft/events-cli` is run, it prompts for permission and can cause CLI tool calls to hang in AI agents. In all instructions or `SKILL.md`, prefer `npx -y @microsoft/events-cli` to include the `-y` flag.
 
 ## CLI behavior contracts
 

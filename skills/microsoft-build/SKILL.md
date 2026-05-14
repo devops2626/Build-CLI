@@ -10,7 +10,7 @@ description: >-
   Learn MCP Server for docs.
 license: Apache-2.0
 compatibility: >-
-  Prefers the msevents CLI (`npx @microsoft/events-cli`) for session catalog
+  Prefers the msevents CLI (`npx -y @microsoft/events-cli`) for session catalog
   access — provides local search, caching, and multi-event support. Falls back
   to direct HTTP fetch if the CLI is not available. For documentation, prefers
   the Microsoft Learn MCP Server (https://learn.microsoft.com/api/mcp); if MCP
@@ -98,28 +98,28 @@ The msevents CLI fetches, caches, indexes, and searches the session catalog loca
 
 ```sh
 # Search by keyword
-npx @microsoft/events-cli sessions --query "Microsoft Foundry" --event build-2026 --json
+npx -y @microsoft/events-cli sessions --query "Microsoft Foundry" --event build-2026 --json
 
 # Search by technology (matches product, tags, topic, languages, title, description)
-npx @microsoft/events-cli sessions --tech "Azure Cosmos DB" --event build-2026 --json
+npx -y @microsoft/events-cli sessions --tech "Azure Cosmos DB" --event build-2026 --json
 
 # Search by speaker
-npx @microsoft/events-cli sessions --speaker "Scott Hanselman" --event build-2026 --json
+npx -y @microsoft/events-cli sessions --speaker "Scott Hanselman" --event build-2026 --json
 
 # Combine filters
-npx @microsoft/events-cli sessions --tech "Microsoft Foundry" --speaker "Yina Arenas" --event build-2026 --json
+npx -y @microsoft/events-cli sessions --tech "Microsoft Foundry" --speaker "Yina Arenas" --event build-2026 --json
 
 # Look up a specific session by code
-npx @microsoft/events-cli session BRK155 --json
+npx -y @microsoft/events-cli session BRK155 --json
 
 # Refresh the cache
-npx @microsoft/events-cli refresh --event build-2026
+npx -y @microsoft/events-cli refresh --event build-2026
 
 # Check cache status
-npx @microsoft/events-cli status
+npx -y @microsoft/events-cli status
 ```
 
-The CLI caches session data locally. On first use it fetches automatically — no explicit refresh needed. Use `--json` for structured output the agent can parse directly.
+The CLI caches session data locally. On first use it fetches automatically — no explicit refresh needed. Use `npx -y` so agents do not get stuck on npm's first-run install prompt. Use `--json` for structured output the agent can parse directly.
 
 #### CLI reference
 
@@ -211,7 +211,7 @@ The user wants to know what recent Microsoft updates are relevant to their proje
 3. If a recent event is active or recent, fetch the Book of News to discover announcements relevant to the inventory. This surfaces product launches, GA announcements, and preview features that may not yet appear in Learn what's-new pages or session titles.
 4. Query Learn MCP Server for recent what's-new pages, SDK updates, and migration guides for each identified dependency. Include any announcements discovered via the Book of News.
 5. Search for relevant sessions:
-   - **With CLI**: Run `npx @microsoft/events-cli sessions --tech "[product]" --event build-2026 --json` for each major technology in the inventory
+   - **With CLI**: Run `npx -y @microsoft/events-cli sessions --tech "[product]" --event build-2026 --json` for each major technology in the inventory
    - **Without CLI**: Fetch the catalog once and match against `product`, `topic`, `tags`, and `programmingLanguages` fields
 6. Present results:
    - Announcements: what was launched or updated, with links to docs and blog posts
@@ -248,7 +248,7 @@ The user wants a personalized event schedule based on their projects or interest
 1. If the user has a project open, scan tech stack (same as above)
 2. If no project is open, interview briefly (2-3 questions max): what they do, what technologies they use or want to learn, what they want from Build (solve a problem, learn something new, hands-on practice)
 3. Search for sessions:
-   - **With CLI**: `npx @microsoft/events-cli sessions --tech "[product]" --event build-2026 --json` per technology, then `--query` for broader interest areas
+   - **With CLI**: `npx -y @microsoft/events-cli sessions --tech "[product]" --event build-2026 --json` per technology, then `--query` for broader interest areas
    - **Without CLI**: Fetch the catalog and match manually
 4. Match sessions to the user's stack using product, topic, tags, languages, and description
 5. Present 3-5 sessions grouped by relevance tier:
@@ -284,7 +284,7 @@ The user saw a session and wants to start building with what was demonstrated.
 
 1. **Ask where to create the project first** — don't assume. New directory, current directory, or a specific path.
 2. Look up the session:
-   - **With CLI**: `npx @microsoft/events-cli session [ID] --event build-2026 --json`
+   - **With CLI**: `npx -y @microsoft/events-cli session [ID] --event build-2026 --json`
    - **Without CLI**: Fetch the catalog and find by code or title
 3. Extract the technologies and products covered from the session metadata
 4. Check prerequisites: based on the session's tech stack, list what the user needs (Azure subscription, SDKs, runtimes, API keys). Ask if they have them before proceeding.
@@ -314,7 +314,7 @@ Open in VS Code? (y/n)
 The user wants to understand a specific session.
 
 1. Look up the session:
-   - **With CLI**: `npx @microsoft/events-cli session [ID] --event build-2026 --json`
+   - **With CLI**: `npx -y @microsoft/events-cli session [ID] --event build-2026 --json`
    - **Without CLI**: Fetch the catalog and find by code or title
 2. Present: title, speakers, abstract, session type, level, time slot, location, related sessions
 3. If the session covers specific products or technologies, search Learn MCP for current docs on those topics
@@ -348,7 +348,7 @@ Learn how to design your database layer for AI-native applications and agents...
 The user just attended or watched a session and wants next steps.
 
 1. Look up the session:
-   - **With CLI**: `npx @microsoft/events-cli session [ID] --event build-2026 --json`
+   - **With CLI**: `npx -y @microsoft/events-cli session [ID] --event build-2026 --json`
    - **Without CLI**: Fetch the catalog and find by code or title
 2. Check the `relatedSessionCodes` field first — use those if populated
 3. Build a response with up to three sections:
@@ -442,7 +442,7 @@ When the agent finds relevant documentation updates for the developer's stack, c
 
 1. Take the product names and topics from the documentation results
 2. Search for matching sessions:
-   - **With CLI**: `npx @microsoft/events-cli sessions --tech "[product]" --event build-2026 --json`
+   - **With CLI**: `npx -y @microsoft/events-cli sessions --tech "[product]" --event build-2026 --json`
    - **Without CLI**: Match against catalog fields `product`, `topic`, `tags`, `solutionArea`
 3. Use announcement content as a bridge — if a what's-new page mentions a feature, search sessions covering that product area
 4. Present sessions alongside the documentation updates, not as a separate list
@@ -503,7 +503,7 @@ A good response from this skill:
 |----------|-----|
 | Microsoft Build | `https://build.microsoft.com/` |
 | Microsoft Ignite | `https://ignite.microsoft.com/` |
-| msevents CLI | `npx @microsoft/events-cli` |
+| msevents CLI | `npx -y @microsoft/events-cli` |
 | CLI source | `../../cli/` |
 | Build 2026 session catalog | `https://aka.ms/build2026-session-info` |
 | Build 2025 session catalog | `https://aka.ms/build2025-session-info` |
